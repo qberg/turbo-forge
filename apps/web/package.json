@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "lint": "biome check .",
-    "dev": "next dev -p 3001",
+    "dev": "next dev -p 3000",
     "build": "next build",
     "start": "next start",
     "analyze": "ANALYZE=true npm run build",
@@ -14,6 +14,7 @@
   "dependencies": {
     "@t3-oss/env-nextjs": "^0.13.8",
     "@repo/next-config": "workspace:*",
+    "@repo/design-system": "workspace:*",
     "@repo/seo": "workspace:*",
     "react": "19.1.0",
     "react-dom": "19.1.0",
@@ -25,7 +26,7 @@
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
-    "typescript": "^5",
+    "typescript": "^5.9.3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

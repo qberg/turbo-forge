@@ -14,12 +14,12 @@ const escapeJsonForHtml = (json: string): string =>
 
 export const JsonLd = ({ code }: JsonLdProps) => (
   <script
+    // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD requires escaped HTML for structured data
     dangerouslySetInnerHTML={{
       __html: escapeJsonForHtml(JSON.stringify(code)),
     }}
-    // biome-ignore lint/security/noDangerouslySetInnerHtml: "This is a JSON-LD script with properly escaped content."
     type="application/ld+json"
   />
 );
 
-export * from "schema-dts";
+export type { Thing, WithContext } from "schema-dts";
